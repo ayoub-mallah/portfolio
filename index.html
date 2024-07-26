@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ayoub Mallah</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1>Ayoub Mallah</h1>
+            <p><strong>Computer Science & Data Science Undergraduate | Posse Scholar | Headstarter Fellow</strong></p>
+        </header>
+
+        <!-- About Me -->
+        <section id="about">
+            <header>
+                <h2>About Me</h2>
+            </header>
+            <div class="content">
+                <img src="wwwwwwwwww.jpeg" width="600" height="800">
+                <p>	Hello, I'm Ayoub Mallah, a dedicated and driven individual pursuing my Bachelor of Science in Computer Science at Rutgers University-New Brunswick. I am passionate about technology and its potential to solve real-world problems, so I am involved in various hands-on experiences and initiatives.
+					
+					Presently, I am a Headstarter Fellow, where I engage with innovative projects and develop skills to drive social impact. Additionally, I serve as an Operations Intern at KIPP, where I contribute to optimizing operational processes and ensuring smooth day-to-day activities. My passion for community service is also evident in my role as a Khateeb at my local mosque, where I deliver sermons and engage with my community on important issues.
+					
+					Throughout my journey, I have gained diverse experiences that have shaped my professional and personal growth. From working as a Work-Study Consultant at Rutgers University's Office of Information Technology, where I provide technical support and maintain IT equipment, to interning at Charles River Associate as a Marketing Intern, where I optimized data presentation and contributed to the editorial team, each role has enriched my skill set.
+					
+					My previous roles include mentoring young Muslims at the Malden Muslim Youth Program, where I helped guide them through modern challenges and working in various customer service positions, including at Whole Foods Market and Market Basket. These experiences have honed my communication skills and my ability to work efficiently in fast-paced environments.
+					
+					I am also proud to have co-founded the Muslim Student Association at KIPP Academy Lynn Collegiate, fostering a supportive community for Muslim students.
+					
+					Awards such as the Posse Foundation Scholarship and the Ed Equity Lab National Honor Society recognition are a testament to my dedication and academic achievements. I am proficient in Java programming and continuously seek opportunities to grow and apply my knowledge meaningfully.
+					
+					Feel free to connect with me to discuss technology, community initiatives, or potential collaborations.</p>
+            </div>
+        </section>
+
+        <!-- Projects Overview -->
+        <section id="projects-overview">
+            <header>
+                <h2>Projects Overview</h2>
+            </header>
+            <ul>
+                <li><a href="#forensic-dna-analysis">Forensic DNA Analysis using Binary Search Trees</a></li>
+				<li><a href = "game-of-life">Conway's Game of Life Simulator</a></li>
+                <!-- Add more projects here -->
+            </ul>
+        </section>
+		 <!-- Forensic DNA Analysis Details -->
+		 <section id="forensic-dna-analysis" class="project-details" style="display:none;">
+            <h3>Forensic DNA Analysis using Binary Search Trees</h3>
+            <p>This project involves using Binary Search Trees to analyze DNA sequences to identify potential owners of unknown DNA based on a provided DNA database.</p>
+            <h4>Project Overview</h4>
+            <p>The Forensic DNA Analysis project aims to identify potential owners of unknown DNA sequences by comparing them with a provided DNA database...</p>
+            <h4>Key Concepts</h4>
+            <ul>
+                <li>DNA and STRs: Analysis focuses on specific DNA sections called Short Tandem Repeats (STRs).</li>
+                <li>Binary Search Trees (BSTs) are used for efficient storage and retrieval of DNA profiles.</li>
+            </ul>
+            <h4>Implementation</h4>
+            <ul>
+                <li>Profile Class: Manages DNA profiles including occurrences of various STRs.</li>
+                <li>ForensicAnalysis Class: Contains methods for BST manipulation and STR analysis.</li>
+            </ul>
+            <p>This project enhances understanding of data structures and their applications in bioinformatics.</p>
+        </section>
+
+        <!-- Game of Life Project Details -->
+        <section id="game-of-life" class="project-details" style="display:none;">
+            <h3>Conway's Game of Life Simulator</h3>
+            <p>This Java application simulates Conway's Game of Life, demonstrating complex behaviors from simple rules.</p>
+            <h4>Technical Overview</h4>
+            <ul>
+                <li>Programming Language: Java</li>
+                <li>Dynamic Grid and State Management</li>
+                <li>Generational Updates and Neighborhood Computation</li>
+            </ul>
+            <h4>Implementation Details</h4>
+            <ul>
+                <li>computeNewGrid(): Calculates the next state of the grid.</li>
+                <li>nextGeneration(): Progresses the grid to the subsequent generation.</li>
+                <li>numOfAliveNeighbors(): Counts alive neighbors to apply game rules.</li>
+            </ul>
+            <p>Dealt with edge cases and performance issues, gaining insights into array manipulation and algorithm optimization.</p>
+            <h4>Future Enhancements</h4>
+            <ul>
+                <li>GUI for dynamic interaction</li>
+                <li>Performance optimization for larger grids</li>
+                <li>Feature additions like state saving/loading and rule adjustments</li>
+            </ul>
+            <p>This project is a testament to the application of theoretical computer science principles in practical, engaging simulations.</p>
+        </section>
+
+	
+        <!-- Buttons -->
+        <section id="buttons">
+            <div class="content">
+                <ul class="actions">
+                    <li><a href="Resume (2).pdf" class="button primary" target="_blank">Resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/ayoub-mallah/" class="button" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/ayoub-mallah" class="button" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts to toggle visibility of project details -->
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetSection = document.querySelector(targetId);
+				const isDisplayed = targetSection.style.display === 'block';
+				// Hide all details
+				document.querySelectorAll('.project-details').forEach(detail => {
+					detail.style.display = 'none';
+				});
+				// Show/hide the clicked project details
+				if (!isDisplayed) {
+					targetSection.style.display = 'block';
+				} else {
+					targetSection.style.display = 'none';
+				}
+			});
+		});
+	</script>
+</div>
+</body>
+</html>
